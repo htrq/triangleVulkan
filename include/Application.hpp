@@ -1,6 +1,8 @@
 #pragma once
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
+#include <string>
+#include <vector>
 
 class Application {
 public:
@@ -14,12 +16,15 @@ private:
     const uint32_t windowHeight { 600 };
 	
 	VkInstance instance;
-    
-    void createInstance();
+    std::vector<std::string> availableLayersNames;  // TODO: move this in Validation.hpp
+     
+    void initWindow();
     void initVulkan();
+    void selectValidationLayer();
+    void createInstance();
 	void mainLoop();
 	void cleanup();
-    void initWindow();
+    
 };
 
 

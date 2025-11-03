@@ -1,5 +1,5 @@
 CXX = clang++-20
-CXXFLAGS = -std=c++23 -stdlib=libc++ -O2 -Wall -Iinclude
+CXXFLAGS = -std=c++23 -stdlib=libc++ -O2 -Wall -Iinclude 
 LDFLAGS = -lvulkan -lglfw -ldl -stdlib=libc++
 
 SRC = $(wildcard src/*.cpp)
